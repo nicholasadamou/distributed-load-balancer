@@ -60,9 +60,11 @@ This job is sent to the master node whereby it is passed off to the optimal slav
 
 ## Design Overview
 
-<a href="report/images/system-architecture.png">
-    <img src="report/images/system-architecture.png" alt="system architecture" width="50%" />
-</a>
+<p align="center">
+    <a href="report/images/system-architecture.png">
+        <img src="report/images/system-architecture.png" alt="system architecture" width="45%" />
+    </a>
+</p>
 
 Given the nature of such a system that is our goal to create the most optimal architecture is master-slave because each node in the cluster must both act as a client and server concurrently in order to achieve the desired results of the said system. However, we have chosen to maintain a centralized master-slave architecture rather than a decentralized system because of its efficiency, consistency, maintainability, and scalability. Having one node act as a reverse proxy for its clients rather than each node providing this said task has its benefits in that its simple and easier to implement and maintain over its counterpart. Additionally, because of this aspect, all nodes must first connect to this said centralized node which makes it easier to track and maintain the connections across the cluster. This improves scalability with the respect that we can simply just add another node to the cluster and the system should inherently handle the additional node. Centralized systems do have their downsides however; for example, it suffers from a single point of failure. If the central—or master—node in the cluster goes down, the individual “slave” machines attached to it are unable to process requests and send their output back to their source. However, on the flipside, decentralized networks require more machines, which means more maintenance and potential issues. Moreover, the implementation of the said network is much more difficult than a centralized system. In short, given the short time-span provided to us to complete this said project and the aforementioned advantages and disadvantages of centralization, the implementation of a centralized master-slave system was chosen.
 
