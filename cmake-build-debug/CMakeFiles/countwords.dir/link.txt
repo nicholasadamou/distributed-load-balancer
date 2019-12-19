@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/countwords.dir/jobs/count-words/countwords.c.o  -o countwords 

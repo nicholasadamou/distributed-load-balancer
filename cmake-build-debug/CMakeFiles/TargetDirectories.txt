@@ -1,0 +1,7 @@
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/master.dir
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/slave.dir
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/client.dir
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/test.dir
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/countwords.dir
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/cmake-build-debug/CMakeFiles/edit_cache.dir

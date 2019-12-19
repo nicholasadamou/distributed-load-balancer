@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/slave.dir/slave.c.o  -o slave -lpthread 

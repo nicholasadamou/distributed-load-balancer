@@ -1,0 +1,62 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/client.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+netdb.h
+-
+libgen.h
+-
+lib/utilities.h
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/lib/utilities.h
+
+/media/psf/Google Drive/Education/college/Cornell College/years/senior/B4/final-project/lib/utilities.h
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+string.h
+-
+unistd.h
+-
+netdb.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+time.h
+-
+asm/errno.h
+-
+errno.h
+-
+sys/stat.h
+-
+limits.h
+-
+libgen.h
+-
+
