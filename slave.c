@@ -212,7 +212,6 @@ void *listen_for_job_request(void *argv) {
 
     printf("[*] Slave is listening on ('%s', %d) for [{JOBS}].\n\n", "127.0.0.1", SEND_JOB_PORT);
 
-
     while(!attr->terminated) {
         /* Accept connection from master. */
         socklen_t master_address_len = sizeof master_address;
