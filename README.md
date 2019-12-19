@@ -86,3 +86,10 @@ The slave nodes are the individual hosts or other computers in the cluster that 
 
 It’s important to consider how often the system receives each node’s CPU Utilization as it can have an impact on the overall system load with respect to the number of nodes in the cluster. If hundreds of slave nodes send their CPU Utilization every second, there would be a greater failure rate and load on the part of the master node. For this reason, it is imperative that we consider this factor with great care and consideration. Thus, in our system, we set a maximum random sleep time of 10 seconds to allow for a greater change in CPU Utilization. Moreover, the sleep time is random because it allows for variance in returned CPU Utilization values.
 
+## License
+
+distributed-load-balancer is © 2019, Nicholas Adamou, Jillian Shew, & Bingzhen Li.
+
+It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: LICENSE
