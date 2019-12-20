@@ -185,8 +185,7 @@ void *listen_for_job_request(void *argv) {
     }
 
     /* Forcefully attaching socket to the desired port  */
-    if (setsockopt(slave_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)))
-    {
+    if (setsockopt(slave_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
         perror("[X] setsockopt");
         exit(1);
     }
@@ -232,7 +231,7 @@ void *listen_for_job_request(void *argv) {
 
         if (bytes > 0) {
             response = "{SUCCESSFULLY_RECEIVED_JOB_REQUEST}";
-            bytes = send(slave_socket, response, strlen(response), 0);
+            bytes = send(master_socket, response, strlen(response), 0);
             printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                    response,
                    inet_ntoa(master_address.sin_addr),
@@ -271,7 +270,7 @@ void *listen_for_job_request(void *argv) {
 
             if (bytes > 0) {
                 response = "{SUCCESSFULLY_RECEIVED_BUFFER}";
-                bytes = send(slave_socket, response, strlen(response), 0);
+                bytes = send(master_socket, response, strlen(response), 0);
                 printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                        response,
                        inet_ntoa(master_address.sin_addr),
@@ -295,7 +294,7 @@ void *listen_for_job_request(void *argv) {
 
                 if (bytes > 0) {
                     response = "{SUCCESSFULLY_RECEIVED_BUFFER}";
-                    bytes = send(slave_socket, response, strlen(response), 0);
+                    bytes = send(master_socket, response, strlen(response), 0);
                     printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                            response,
                            inet_ntoa(master_address.sin_addr),
@@ -353,7 +352,7 @@ void *listen_for_job_request(void *argv) {
 
                                 fputs("{FAILED_TO_RECEIVE_BUFFER}\n", stderr);
 
-                                bytes = send(slave_socket, response, strlen(response), 0);
+                                bytes = send(master_socket, response, strlen(response), 0);
                                 printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                                        response,
                                        inet_ntoa(master_address.sin_addr),
@@ -367,7 +366,7 @@ void *listen_for_job_request(void *argv) {
 
                     fputs("{FAILED_TO_RECEIVE_BUFFER}\n", stderr);
 
-                    bytes = send(slave_socket, response, strlen(response), 0);
+                    bytes = send(master_socket, response, strlen(response), 0);
                     printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                            response,
                            inet_ntoa(master_address.sin_addr),
@@ -379,7 +378,7 @@ void *listen_for_job_request(void *argv) {
 
                 fputs("{FAILED_TO_RECEIVE_BUFFER}\n", stderr);
 
-                bytes = send(slave_socket, response, strlen(response), 0);
+                bytes = send(master_socket, response, strlen(response), 0);
                 printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                        response,
                        inet_ntoa(master_address.sin_addr),
@@ -391,7 +390,7 @@ void *listen_for_job_request(void *argv) {
 
             fputs("{FAILED_TO_RECEIVE_JOB_REQUEST}\n", stderr);
 
-            bytes = send(slave_socket, response, strlen(response), 0);
+            bytes = send(master_socket, response, strlen(response), 0);
             printf("[Slave]: Sending: [%s] to Master ('%s', %d).\n",
                    response,
                    inet_ntoa(master_address.sin_addr),
