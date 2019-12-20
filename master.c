@@ -159,8 +159,7 @@ void *listen_for_clients(void *argv) {
     }
 
     /* Forcefully attaching socket to the desired port  */
-    if (setsockopt(master_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)))
-    {
+    if (setsockopt(master_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
         perror("[X] setsockopt");
         exit(1);
     }
@@ -720,8 +719,7 @@ void *load_balance(void *argv) {
     }
 
     /* Forcefully attaching socket to the desired port  */
-    if (setsockopt(master_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)))
-    {
+    if (setsockopt(master_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
         perror("[X] setsockopt");
         exit(1);
     }
