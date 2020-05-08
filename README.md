@@ -88,7 +88,7 @@ It’s important to consider how often the system receives each node’s CPU Uti
 
 ## License
 
-distributed-load-balancer is © 2019, Nicholas Adamou, Jillian Shew, & Bingzhen Li.
+distributed-load-balancer is © Nicholas Adamou, Jillian Shew, & Bingzhen Li.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
